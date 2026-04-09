@@ -110,7 +110,7 @@ const LandingPage = ({ onStart }: { onStart: () => void }) => {
           <Sparkles className="w-3.5 h-3.5" />
           <span>Next-Gen Learning Architecture</span>
         </div>
-        <h1 ref={heroTextRef} className="text-6xl md:text-8xl font-black tracking-tight mb-8 leading-[1]">
+        <h1 ref={heroTextRef} className="text-6xl md:text-8xl text-gray-200 tracking-tight mb-20 leading-[1]">
           Master Any Skill <br />
           <span className="text-gradient">With AI Precision.</span>
         </h1>
@@ -187,8 +187,8 @@ const LandingPage = ({ onStart }: { onStart: () => void }) => {
 type SortOption = 'newest' | 'oldest' | 'progress-high' | 'progress-low' | 'a-z' | 'z-a';
 type ProgressFilter = 'all' | 'not-started' | 'in-progress' | 'completed';
 const SORT_LABELS: Record<SortOption, string> = { 'newest': 'Newest First', 'oldest': 'Oldest First', 'progress-high': 'Most Progress', 'progress-low': 'Least Progress', 'a-z': 'A \u2192 Z', 'z-a': 'Z \u2192 A' };
-const SORT_KEYS: SortOption[] = ['newest','oldest','progress-high','progress-low','a-z','z-a'];
-const FILTER_KEYS: ProgressFilter[] = ['all','not-started','in-progress','completed'];
+const SORT_KEYS: SortOption[] = ['newest', 'oldest', 'progress-high', 'progress-low', 'a-z', 'z-a'];
+const FILTER_KEYS: ProgressFilter[] = ['all', 'not-started', 'in-progress', 'completed'];
 const FILTER_LABELS: Record<ProgressFilter, string> = { 'all': 'All Paths', 'not-started': 'Not Started', 'in-progress': 'In Progress', 'completed': 'Completed' };
 
 const getProgress = (c: Course) => c.totalChapters > 0 ? Math.round((c.completedChapters / c.totalChapters) * 100) : 0;

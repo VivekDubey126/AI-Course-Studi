@@ -84,7 +84,7 @@ const LandingPage = ({ onStart }: { onStart: () => void }) => {
   useEffect(() => {
     if (window.gsap && window.ScrollTrigger) {
       window.gsap.registerPlugin(window.ScrollTrigger);
-      window.gsap.from(heroTextRef.current, { y: 100, opacity: 0, duration: 1.2, ease: "power4.out", delay: 0.2 });
+      window.gsap.from(heroTextRef.current, { y: 80, duration: 1.2, ease: "power4.out", delay: 0.2 });
       if (cardsRef.current) {
         window.gsap.from(cardsRef.current.children, {
           scrollTrigger: { trigger: cardsRef.current, start: "top 85%" },
